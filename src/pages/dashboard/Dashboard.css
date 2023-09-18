@@ -1,0 +1,12 @@
+.dashboard {
+  width: 100%;
+  min-height: 800px;
+  overflow-y: hidden;
+}
+.dashboard h4 {
+  text-align: center;
+  width: 100%;
+}
+.dashboard .subtext {
+  opacity: 0.6;
+}

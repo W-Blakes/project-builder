@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,900;1,200&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-flow: row nowrap;
+  font-family: 'Poppins';
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.app-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-height: 100vh;
+  overflow-x: hidden;
+  z-index: 10;
+}
+.app-container::-webkit-scrollbar {
+  width: 10px;
+}
+.app-container::-webkit-scrollbar-thumb {
+  border-radius: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* SCROLLBAR */
+/* Default Theme */
+.app.default .app-container::-webkit-scrollbar-track {
+  background: var(--track-DefaultBg);
+}
+.app.default .app-container::-webkit-scrollbar-thumb {
+  background: var(--track-Defaultthumb);
+  border-bottom: 2px solid var(--track-Defaulthover);
+  border-top: 2px solid var(--track-Defaulthover);
+}
+.app.default .app-container::-webkit-scrollbar-thumb:hover {
+  background: var(--track-Defaulthover);
+}
+
+/* Apple Theme */
+.app.apple .app-container::-webkit-scrollbar-track {
+  background: var(--track-AppleBg);
+}
+.app.apple .app-container::-webkit-scrollbar-thumb {
+  background: var(--track-Applethumb);
+  border-bottom: 2px solid var(--track-Applehover);
+  border-top: 2px solid var(--track-Applehover);
+}
+.app.apple .app-container::-webkit-scrollbar-thumb:hover {
+  background: var(--track-Applehover);
+}
+
+/* Sunset Theme */
+.app.sunset .app-container::-webkit-scrollbar-track {
+  background: var(--track-SunsetBg);
+}
+.app.sunset .app-container::-webkit-scrollbar-thumb {
+  background: var(--track-Sunsetthumb);
+  border-bottom: 2px solid var(--track-Sunsethover);
+  border-top: 2px solid var(--track-Sunsethover);
+}
+.app.sunset .app-container::-webkit-scrollbar-thumb:hover {
+  background: var(--track-Sunsethover);
+}
+
+/* Jade Theme */
+.app.jade .app-container::-webkit-scrollbar-track {
+  background: var(--track-JadeBg);
+}
+.app.jade .app-container::-webkit-scrollbar-thumb {
+  background: var(--track-Jadethumb);
+  border-bottom: 2px solid var(--track-Jadehover);
+  border-top: 2px solid var(--track-Jadehover);
+}
+.app.jade .app-container::-webkit-scrollbar-thumb:hover {
+  background: var(--track-Jadehover);
+}
+
+/* Daytona Theme */
+.app.daytona .app-container::-webkit-scrollbar-track {
+  background: var(--track-DaytonaBg);
+}
+.app.daytona .app-container::-webkit-scrollbar-thumb {
+  background: var(--track-Daytonathumb);
+  border-bottom: 2px solid var(--track-Daytonahover);
+  border-top: 2px solid var(--track-Daytonahover);
+}
+.app.daytona .app-container::-webkit-scrollbar-thumb:hover {
+  background: var(--track-Daytonahover);
+}
+
+/* Plum Theme */
+.app.plum .app-container::-webkit-scrollbar-track {
+  background: var(--track-PlumBg);
+}
+.app.plum .app-container::-webkit-scrollbar-thumb {
+  background: var(--track-Plumthumb);
+  border-bottom: 2px solid var(--track-Plumhover);
+  border-top: 2px solid var(--track-Plumhover);
+}
+.app.plum .app-container::-webkit-scrollbar-thumb:hover {
+  background: var(--track-Plumhover);
+}
+
+/* projectbuild */
+.menu-container::-webkit-scrollbar {
+  width: 10px;
+}
+.menu-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+/* Handle */
+.menu-container::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: dimgray;
+}
+/* Handle on hover */
+.menu-container::-webkit-scrollbar-thumb:hover {
+  background: silver;
 }

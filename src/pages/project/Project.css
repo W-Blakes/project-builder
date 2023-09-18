@@ -1,0 +1,140 @@
+.show-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  width: 90%;
+}
+.editProject-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 98%;
+}
+.show-title {
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 100;
+}
+.show-title h1 {
+  text-align: left;
+  font-size: 50px;
+}
+
+.show-title h4 {
+  text-align: left;
+  font-size: 25px;
+}
+
+.show-project {
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  filter: brightness(70%);
+  animation: loadIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.showImg-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-self: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.imgA,
+.imgB,
+.imgC,
+.imgD {
+  margin: 10px 10px;
+  max-width: 25%;
+  height: auto;
+  background-position: center;
+  object-position: center;
+  background-size: cover;
+  border-radius: none;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.imgA:hover,
+.imgB:hover,
+.imgC:hover,
+.imgD:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(105%);
+  box-shadow: var(--light-shadow);
+  cursor: pointer;
+}
+
+.imgA {
+  flex-grow: 1;
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+}
+
+.edited {
+  opacity: 0.5;
+  width: 100%;
+  text-align: left;
+}
+
+.show-details {
+  text-align: left;
+}
+/* Animations */
+@keyframes loadIn {
+  0% {
+    transform: translatey(200vw);
+    filter: blur(10px) brightness(70%);
+    opacity: 0;
+  }
+  50% {
+    transform: translatey(0);
+  }
+  100% {
+    filter: blur(0px) brightness(90%);
+    opacity: 100;
+  }
+}
+
+/* preview  */
+.showImg-container .preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 100%;
+}
+.showImg-container .preview-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 1rem;
+  margin-left: 0;
+  border-radius: 6px;
+  opacity: 0;
+  animation: reveal 0.6s ease-in-out forwards;
+}
+.showImg-container .preview img {
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.showImg-container .preview-title {
+  margin: auto;
+}

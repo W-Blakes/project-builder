@@ -1,0 +1,98 @@
+.toggleContainer {
+  background-color: dimgray;
+  height: 40px;
+  width: 70px;
+  margin-left: 1rem;
+  border-radius: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: var(--icon-shadow);
+}
+.toggleContainer div {
+  border-radius: 50px;
+  height: 25px;
+  width: 25px;
+}
+.darkBtn,
+.lightBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 20px;
+}
+.darkBtn {
+  background: black;
+  color: #fff;
+  margin-left: 35px;
+}
+.lightBtn {
+  color: orange;
+  margin-left: 5px;
+}
+.sun {
+  filter: drop-shadow(0 0 6px orangered);
+}
+.moon {
+  filter: drop-shadow(0 0 6px lightblue);
+}
+.sun:active {
+  color: yellow;
+}
+
+.toggle {
+  background-color: lime;
+  margin: 5px;
+  margin-left: 5px;
+  transition: margin 0.6s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+.toggle.dark {
+  animation: toggleDark 0.2s ease-in forwards;
+}
+.toggle.light {
+  animation: toggleLight 0.2s ease-in forwards;
+}
+
+.toggleContainer:active {
+  transform: scale(96%);
+}
+@keyframes toggleLight {
+  0% {
+    margin-left: 35px;
+    width: 25px;
+  }
+  10% {
+    margin-left: 35px;
+    width: 35px;
+  }
+  80% {
+    margin-left: 5px;
+    width: 35px;
+  }
+  100% {
+    margin-left: 5px;
+    width: 25px;
+  }
+}
+@keyframes toggleDark {
+  0% {
+    margin-left: 5px;
+    width: 25px;
+  }
+  10% {
+    margin-left: 5px;
+    width: 35px;
+  }
+  80% {
+    margin-left: 35px;
+    width: 35px;
+  }
+  100% {
+    margin-left: 35px;
+    width: 25px;
+  }
+}

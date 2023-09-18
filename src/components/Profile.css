@@ -1,0 +1,54 @@
+.profile {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+  min-height: 250px;
+  /* background-color: rgba(0, 0, 0, 0.253); */
+}
+.profile-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+}
+.profile-img img {
+  margin-top: 50px;
+  height: 120px;
+  width: 120px;
+}
+
+.profile p {
+  margin: 1rem auto;
+  margin-bottom: 2rem;
+}
+.edit-btn {
+  position: absolute;
+  top: 100px;
+  border-radius: 50%;
+  height: 0px;
+  margin: 0;
+  font-size: 15px;
+  opacity: 0.5;
+  color: var(--trim-color);
+  z-index: 30;
+}
+.edit-btn:hover {
+  transition: 0.2s ease-in;
+  opacity: 1;
+}
+.greeting {
+  font-weight: bolder;
+  color: var(--background);
+}
+.border-bottom {
+  height: 2px;
+  width: 80%;
+}

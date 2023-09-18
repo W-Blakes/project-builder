@@ -1,0 +1,96 @@
+.sidebar {
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 300px;
+  background: var(--styled-background);
+  color: var(--background);
+  z-index: 1;
+  animation: loadBarIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.sidebar.mini {
+  height: 100vh;
+  width: 75px;
+  z-index: 100;
+  animation: none;
+}
+.sidebar.mini .profile-img {
+  height: 55px;
+  width: 55px;
+}
+.sidebar.mini .profile-img img {
+  margin-top: 25px;
+  height: 50px;
+  width: 50px;
+}
+.sidebar-menu.mini p a {
+  font-size: 20px;
+}
+
+.edit-btn {
+  font-size: 10px;
+  top: 55px;
+}
+.greeting {
+  font-size: 12px;
+}
+
+@keyframes loadBarIn {
+  0% {
+    transform: translatex(-100vw);
+    filter: blur(10px) brightness(70%);
+    opacity: 0;
+  }
+  50% {
+    transform: translatex(0);
+  }
+  100% {
+    filter: blur(0px) brightness(100%);
+    opacity: 100;
+  }
+}
+.sidebar-menu {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-flow: column nowrap;
+  margin-top: 3rem;
+}
+
+.sidebar-menu p {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  height: 3rem;
+  background: none;
+  margin: 0.4rem 0;
+  color: #000;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.sidebar-menu p a {
+  justify-content: center;
+  text-transform: capitalize;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background: none;
+}
+.sidebar-menu p a:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  transition: background 0.2s ease-in-out;
+}
+.sidebar-menu p a.active:hover {
+  filter: none;
+  border-bottom: none;
+}
+
+.sidebar-menu p a.active {
+  justify-content: center;
+  text-transform: capitalize;
+  font-weight: bolder;
+  background: var(--background);
+  border-right: none;
+  z-index: 300;
+  transition: color 0.2s ease-in-out;
+}

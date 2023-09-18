@@ -1,0 +1,195 @@
+/* project-build */
+.build-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  max-width: 850px;
+  margin: 1rem auto;
+  transform: translatex(0vw);
+  border-radius: 6px;
+  animation: loadIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.buildLayout-container .btn {
+  margin: 1rem;
+}
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  color: var(--primary-text);
+  margin: 0 auto;
+  min-width: 40%;
+  max-width: 99%;
+  margin: 4px auto;
+  border-radius: 6px;
+}
+.project-img {
+  width: 100%;
+  background-position: center;
+}
+/*  */
+
+/* menu */
+
+.menu {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 1rem;
+  /* min-height: 46vh; */
+  height: 62vh;
+  width: 300px;
+  max-width: 400px;
+  animation: reveal 0.6s ease-in-out forwards;
+  padding: 0;
+}
+/* options */
+.menu-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* max-height: 36vh; */
+  min-height: 30vh;
+  max-width: 110%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.menu-container.wheel {
+  /* max-height: 45vh; */
+  min-height: 45vh;
+}
+
+/* Paint page  */
+
+.selection {
+  display: flex;
+  height: 40px;
+  max-width: 120px;
+  margin: 10px;
+  text-transform: capitalize;
+  border-radius: 6px;
+  box-shadow: var(--light-shadow);
+}
+.selection-types {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 300px;
+  margin: 1rem 0;
+}
+.paint-selection-types {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 300px;
+  margin: 1rem 0;
+}
+.selection a:hover,
+.selection div:hover {
+  transform: scale(105%);
+}
+.selection a:active,
+.selection div:active {
+  transform: scale(98%);
+}
+.selection a,
+.selection div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  width: 200px;
+  cursor: pointer;
+}
+/* Wheel page  */
+
+.menu.wheel .selection {
+  width: 130px;
+  margin: 4px auto;
+  justify-content: center;
+}
+.manu.wheel .selection a {
+  background-position: 30%;
+  background-repeat: no-repeat;
+  background-size: 95%;
+  height: 55px;
+  width: 55px;
+  border-radius: 6px;
+}
+
+/* REFLECTION PREVIEW LAYER */
+
+.custom-color-container,
+.color-container {
+  position: relative;
+  z-index: 100;
+}
+.paint-shaderKandy,
+.paint-shaderChameleon,
+.paint-shaderReflection,
+.reflectionShader,
+.paint-shaderPearl,
+.paint-shaderMetallic,
+.paint-shaderBase {
+  position: absolute;
+}
+.paint-shaderKandy {
+  mix-blend-mode: overlay;
+}
+.paint-shaderChameleon {
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+.paint-shaderReflection,
+.reflectionShader,
+.paint-shaderMetallic {
+  mix-blend-mode: screen;
+}
+.paint-shaderPearl {
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+.paint-shaderBase {
+  mix-blend-mode: multiply;
+}
+.material-container {
+  height: 249px;
+  width: 249px;
+  padding: 1rem;
+}
+.show-preview .material-container {
+  height: 550px;
+  width: 550px;
+  padding: 1rem;
+}
+
+/* COLOR PICKER  */
+.chrome-picker {
+  width: 90% !important;
+  padding: 1rem !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.chrome-picker div {
+  cursor: pointer !important;
+}
+.hue-horizontal {
+  cursor: pointer !important;
+}
+.chrome-picker input {
+  display: none !important;
+  color: #fff !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.chrome-picker span {
+  display: none !important;
+  color: #fff !important;
+}
+.chrome-picker svg {
+  display: none !important;
+  fill: #fff !important;
+}

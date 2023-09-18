@@ -1,0 +1,118 @@
+.bgContainer {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  opacity: 0.4;
+  pointer-events: none;
+  display: flex;
+  overflow: hidden;
+  animation: bgEnter 4s ease-in-out forwards;
+}
+.bgContainer div {
+  position: absolute;
+}
+.dashedA,
+.dashedB {
+  top: 0;
+  height: 100%;
+  width: 20px;
+}
+.dashedA {
+  left: 10%;
+  border-left: 2px dashed orange;
+  border-right: 5px dashed orange;
+  animation: bgSlide 2s ease-in-out forwards;
+}
+.dashedB {
+  width: 70px;
+  right: 10%;
+  border-right: 5px dashed orange;
+  animation: bgSlide 4s ease-in-out forwards;
+}
+
+.linesA {
+  top: 0;
+  left: 20%;
+  height: 100%;
+  width: 40px;
+  border-right: 2px solid orange;
+  border-left: 8px solid orange;
+  animation: bgSlide 3s ease-in-out forwards;
+}
+.linesB {
+  top: 20%;
+  left: 0%;
+  height: 60px;
+  width: 100%;
+  border-top: 2px solid orange;
+  border-bottom: 2px solid orange;
+  animation: bgSlide 3s ease-in-out alternate, bgFlicker 3s ease-in-out infinite;
+}
+.circlesA,
+.circlesB,
+.circlesC,
+.circlesD {
+  border-radius: 50%;
+}
+.circlesA {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 250px;
+  bottom: -250px;
+  border: 5px dashed orange;
+  background: black;
+  height: 500px;
+  width: 500px;
+  animation: bgSpin1 4s ease-in-out infinite, bgFlicker 2s ease-in-out infinite;
+}
+.circlesB {
+  border: 2px dashed orange;
+  height: 450px;
+  width: 450px;
+  animation: bgSpin1 8s ease-in-out alternate;
+}
+.circlesC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -375px;
+  right: -375px;
+  border: 5px dashed orange;
+  background: black;
+  height: 750px;
+  width: 750px;
+  animation: bgSpin1 15s ease-in-out alternate infinite;
+}
+.circlesD {
+  border: 2px dashed orange;
+  height: 450px;
+  width: 450px;
+  animation: bgSpin1 8s ease-in-out alternate;
+}
+@keyframes bgSpin1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes bgSlide {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes bgEnter {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
